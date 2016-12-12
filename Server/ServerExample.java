@@ -31,8 +31,8 @@ public class ServerExample {
             multiSendWorker.start();
 
             String serverMessage="Сервер запущен...";
-            //Отправка сообщения всем пользователям, где аргументы класса Message - (Sender,Receiver,Body)
-            multiSendWorker.addMessage(new Message("Сервер",null,serverMessage));
+            //Вывод сообщения на консоль
+            printMessage(serverMessage);
 
             //Принимаем клиентский сокет, отправляем его обрабатываться в отдельный поток, добавляем этот поток
             // в коллекцию. Затем возвращаемся назад и ждем нового клиента.
